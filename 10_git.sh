@@ -3,6 +3,10 @@
 if [ -r /usr/share/git/completion/git-completion.bash ]; then
     . /usr/share/git/completion/git-completion.bash
     . /usr/share/git/completion/git-prompt.sh
+elif [ -r /usr/local/etc/bash_completion.d/git-completion.bash ]; then
+    # for Mac OS
+    . /usr/local/etc/bash_completion.d/git-completion.bash
+    . /usr/local/etc/bash_completion.d/git-prompt.sh
 fi
 
 # プロンプトに git のブランチ名を表示させる
